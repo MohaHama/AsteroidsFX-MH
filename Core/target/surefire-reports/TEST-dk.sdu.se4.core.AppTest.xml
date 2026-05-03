@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.1" name="dk.sdu.se4.core.AppTest" time="0.072" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.1" name="dk.sdu.se4.core.AppTest" time="0.067" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="25"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -10,12 +10,13 @@
     <property name="user.variant" value=""/>
     <property name="java.vendor.url" value="https://adoptium.net/"/>
     <property name="user.timezone" value="Europe/Copenhagen"/>
+    <property name="user.country.format" value="DK"/>
     <property name="os.name" value="Windows 11"/>
     <property name="java.vm.specification.version" value="25"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-25.0.2.10-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\Moham\AppData\Local\Temp\surefire11360542761347590006\surefirebooter-20260218104230969_3.jar C:\Users\Moham\AppData\Local\Temp\surefire11360542761347590006 2026-02-18T10-42-30_820-jvmRun1 surefire-20260218104230969_1tmp surefire_0-20260218104230969_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\Moham\AppData\Local\Temp\surefire13467709647389249868\surefirebooter-20260503142830204_3.jar C:\Users\Moham\AppData\Local\Temp\surefire13467709647389249868 2026-05-03T14-28-30_021-jvmRun1 surefire-20260503142830204_1tmp surefire_0-20260503142830204_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Dev\AsteroidsFX\Core\target\test-classes;C:\Dev\AsteroidsFX\Core\target\classes;C:\Users\Moham\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.11.0\junit-jupiter-api-5.11.0.jar;C:\Users\Moham\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Moham\.m2\repository\org\junit\platform\junit-platform-commons\1.11.0\junit-platform-commons-1.11.0.jar;C:\Users\Moham\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Moham\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.11.0\junit-jupiter-params-5.11.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Moham\AppData\Local\Temp\surefire11360542761347590006\surefirebooter-20260218104230969_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Moham\AppData\Local\Temp\surefire13467709647389249868\surefirebooter-20260503142830204_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="25.0.2+10-LTS"/>
@@ -49,6 +50,7 @@
     <property name="user.dir" value="C:\Dev\AsteroidsFX\Core"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.language.format" value="da"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="native.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-25.0.2.10-hotspot\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Eclipse Adoptium\jdk-25.0.2.10-hotspot\bin;C:\Python314\Scripts\;C:\Python314\;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Eclipse Adoptium\jdk-21.0.6.7-hotspot\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\Docker\Docker\resources\bin;C:\xampp\php;C:\ProgramData\ComposerSetup\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Microsoft SQL Server\170\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\php;C:\Program Files\Eclipse Adoptium\jdk-25.0.2.10-hotspot\\bin;C:\Dev\apache-maven-3.9.12-bin\bin;C:\Users\Moham\AppData\Local\Programs\Python\Python313\Scripts\;C:\Users\Moham\AppData\Local\Programs\Python\Python313\;C:\Users\Moham\AppData\Local\Programs\Python\Launcher\;C:\Users\Moham\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\DataGrip 2024.3.4\bin;;C:\Users\Moham\.dotnet\tools;C:\Users\Moham\AppData\Local\Programs\mongosh\;C:\Users\Moham\AppData\Local\Programs\MiKTeX\miktex\bin\x64\;C:\Users\Moham\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Moham\AppData\Roaming\Composer\vendor\bin;C:\Users\Moham\AppData\Roaming\npm;;."/>
@@ -60,5 +62,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="69.0"/>
   </properties>
-  <testcase name="shouldAnswerWithTrue" classname="dk.sdu.se4.core.AppTest" time="0.037"/>
+  <testcase name="shouldAnswerWithTrue" classname="dk.sdu.se4.core.AppTest" time="0.033"/>
 </testsuite>

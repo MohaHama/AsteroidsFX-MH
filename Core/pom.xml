@@ -10,6 +10,7 @@
   <groupId>dk.sdu.se4.core</groupId>
   <artifactId>Core</artifactId>
   <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
 
   <name>Core</name>
   <!-- FIXME change it to the project's website -->
