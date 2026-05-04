@@ -1,1 +1,9 @@
-dk\sdu\se4\common\App.class
+dk\sdu\se4\common\data\GameData.class
+dk\sdu\se4\common\util\ServiceLocator.class
+module-info.class
+dk\sdu\se4\common\services\IEntityProcessingService.class
+dk\sdu\se4\common\data\Entity.class
+dk\sdu\se4\common\services\IGamePluginService.class
+dk\sdu\se4\common\services\IPostEntityProcessingService.class
+dk\sdu\se4\common\data\World.class
+dk\sdu\se4\common\data\GameKeys.class

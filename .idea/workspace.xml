@@ -5,17 +5,95 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32028c03-dfb2-44b7-8874-bd655354ef6b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Asteroids/src/main/java/dk/sdu/se4/AsteroidPlugin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Asteroids/src/main/java/dk/sdu/se4/AsteroidProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Asteroids/src/main/java/dk/sdu/se4/AsteroidSplitterImplementation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Asteroids/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bullet/src/main/java/dk/sdu/se4/bullet/BulletControlSystem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bullet/src/main/java/dk/sdu/se4/bullet/BulletPlugin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bullet/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Collision/src/main/java/dk/sdu/se4/CollisionDetector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Collision/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Common/src/main/java/dk/sdu/se4/common/data/Entity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Common/src/main/java/dk/sdu/se4/common/data/GameData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Common/src/main/java/dk/sdu/se4/common/data/GameKeys.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Common/src/main/java/dk/sdu/se4/common/data/World.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Common/src/main/java/dk/sdu/se4/common/services/IEntityProcessingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Common/src/main/java/dk/sdu/se4/common/services/IGamePluginService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Common/src/main/java/dk/sdu/se4/common/services/IPostEntityProcessingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Common/src/main/java/dk/sdu/se4/common/util/ServiceLocator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Common/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CommonAsteroids/src/main/java/dk/sdu/se4/Asteroid.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CommonAsteroids/src/main/java/dk/sdu/se4/IAsteroidSplitter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CommonAsteroids/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CommonBullet/src/main/java/dk/sdu/se4/Bullet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CommonBullet/src/main/java/dk/sdu/se4/IBullet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CommonBullet/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/src/main/java/dk/sdu/se4/core/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/src/main/java/dk/sdu/se4/core/ModuleConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Player/src/main/java/dk/sdu/se4/player/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Player/src/main/java/dk/sdu/se4/player/PlayerControlSystem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Player/src/main/java/dk/sdu/se4/player/PlayerPlugin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Player/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bullet/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Bullet/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bullet/src/test/java/dk/sdu/se4/bullet/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bullet/target/Bullet-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Bullet/target/Bullet-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bullet/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Bullet/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bullet/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Bullet/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bullet/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bullet/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bullet/target/surefire-reports/TEST-dk.sdu.se4.bullet.AppTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bullet/target/surefire-reports/dk.sdu.se4.bullet.AppTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bullet/target/test-classes/dk/sdu/se4/bullet/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/main/java/dk/sdu/se4/common/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/test/java/dk/sdu/se4/common/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/target/Common-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Common/target/Common-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/target/classes/dk/sdu/se4/common/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Common/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/target/surefire-reports/TEST-dk.sdu.se4.common.AppTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/target/surefire-reports/dk.sdu.se4.common.AppTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/target/test-classes/dk/sdu/se4/common/AppTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/src/main/java/dk/sdu/se4/core/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/dk/sdu/se4/core/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/src/test/java/dk/sdu/se4/core/AppTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/target/Core-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Core/target/Core-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/target/surefire-reports/TEST-dk.sdu.se4.core.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Core/target/surefire-reports/TEST-dk.sdu.se4.core.AppTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/target/surefire-reports/dk.sdu.se4.core.AppTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Core/target/surefire-reports/dk.sdu.se4.core.AppTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/target/classes/dk/sdu/se4/core/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/Core/target/classes/dk/sdu/se4/core/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Core/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Core/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Core/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/target/surefire-reports/TEST-dk.sdu.se4.core.AppTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/target/surefire-reports/dk.sdu.se4.core.AppTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/target/test-classes/dk/sdu/se4/core/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Enemy/target/Enemy-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Enemy/target/Enemy-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Enemy/target/surefire-reports/TEST-dk.sdu.se4.enemy.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Enemy/target/surefire-reports/TEST-dk.sdu.se4.enemy.AppTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Enemy/target/surefire-reports/dk.sdu.se4.enemy.AppTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Enemy/target/surefire-reports/dk.sdu.se4.enemy.AppTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Player/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/src/test/java/dk/sdu/se4/player/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/Player-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Player/target/Player-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Player/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Player/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/surefire-reports/TEST-dk.sdu.se4.player.AppTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/surefire-reports/dk.sdu.se4.player.AppTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/target/test-classes/dk/sdu/se4/player/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mods-mvn/Bullet-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/mods-mvn/Bullet-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mods-mvn/Common-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/mods-mvn/Common-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mods-mvn/Core-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/mods-mvn/Core-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mods-mvn/Enemy-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mods-mvn/Player-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/mods-mvn/Player-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,13 +101,23 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="module-info" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="39sxNRcc9jtNHVKDprxSoNNrXCN" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -43,7 +131,8 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "last_opened_file_path": "C:/Dev/AsteroidsFX",
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
   <component name="SharedIndexes">
