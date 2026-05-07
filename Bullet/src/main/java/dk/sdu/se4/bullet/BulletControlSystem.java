@@ -1,13 +1,13 @@
 package dk.sdu.se4.bullet;
 
 import dk.sdu.se4.common.bullet.Bullet;
-import dk.sdu.se4.common.bullet.IBullet;
+import dk.sdu.se4.common.bullet.BulletSPI;
 import dk.sdu.se4.common.data.Entity;
 import dk.sdu.se4.common.data.GameData;
 import dk.sdu.se4.common.data.World;
 import dk.sdu.se4.common.services.IEntityProcessingService;
 
-public class BulletControlSystem implements IEntityProcessingService, IBullet {
+public class BulletControlSystem implements IEntityProcessingService, BulletSPI {
 
     @Override
     public void process(GameData gameData, World world) {
@@ -22,7 +22,7 @@ public class BulletControlSystem implements IEntityProcessingService, IBullet {
 
     @Override
     public Entity createBullet(Entity shooter, GameData gameData) {
-        Entity bulletEntity = new Bullet();
+        Bullet bulletEntity = new Bullet();
 
         bulletEntity.setPolygonCoordinates(
                 1, -1,
@@ -38,6 +38,7 @@ public class BulletControlSystem implements IEntityProcessingService, IBullet {
         bulletEntity.setY(shooter.getY() + movementY * 10);
         bulletEntity.setRotation(shooter.getRotation());
         bulletEntity.setRadius(1);
+        bulletEntity.setOwnerID(shooter.getID());
 
         return bulletEntity;
     }

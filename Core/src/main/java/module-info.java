@@ -12,5 +12,5 @@ module Core {
     uses dk.sdu.se4.common.services.IGamePluginService;
     uses dk.sdu.se4.common.services.IEntityProcessingService;
     uses dk.sdu.se4.common.services.IPostEntityProcessingService;
-    uses dk.sdu.se4.common.bullet.IBullet;
+    uses dk.sdu.se4.common.bullet.BulletSPI;
 }

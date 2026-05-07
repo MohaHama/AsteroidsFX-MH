@@ -1,6 +1,6 @@
 package dk.sdu.se4.player;
 
-import dk.sdu.se4.common.bullet.IBullet;
+import dk.sdu.se4.common.bullet.BulletSPI;
 import dk.sdu.se4.common.data.Entity;
 import dk.sdu.se4.common.data.GameData;
 import dk.sdu.se4.common.data.GameKeys;
@@ -41,8 +41,8 @@ public class PlayerControlSystem implements IEntityProcessingService {
         }
     }
 
-    private Collection<? extends IBullet> getBulletSPIs() {
-        return ServiceLoader.load(IBullet.class)
+    private Collection<? extends BulletSPI> getBulletSPIs() {
+        return ServiceLoader.load(BulletSPI.class)
                 .stream()
                 .map(ServiceLoader.Provider::get)
                 .collect(toList());

@@ -14,13 +14,12 @@ public class AsteroidProcessor implements IEntityProcessingService {
     private IAsteroidSplitter splitter = new AsteroidSplitterImplementation();
     private final Random random = new Random();
     private long lastSpawnTime = System.currentTimeMillis();
-    private static final long SPAWN_INTERVAL_MS = 3000;
+    private static final long SPAWN_INTERVAL_MS = 1000;
 
     @Override
     public void process(GameData gameData, World world) {
-
-        // Spawn a new asteroid every 3 seconds
         long now = System.currentTimeMillis();
+
         if (now - lastSpawnTime >= SPAWN_INTERVAL_MS) {
             world.addEntity(createAsteroid(gameData));
             lastSpawnTime = now;
@@ -42,6 +41,8 @@ public class AsteroidProcessor implements IEntityProcessingService {
 
     private Entity createAsteroid(GameData gameData) {
         Entity asteroid = new Asteroid();
+        asteroid.setHealth(1);
+
         int size = random.nextInt(10) + 5;
 
         asteroid.setPolygonCoordinates(
@@ -51,20 +52,33 @@ public class AsteroidProcessor implements IEntityProcessingService {
                 size, size
         );
 
-        // Spawn on a random edge of the screen
         int edge = random.nextInt(4);
-        switch (edge) {
-            case 0 -> { asteroid.setX(random.nextInt(gameData.getDisplayWidth())); asteroid.setY(0); }
-            case 1 -> { asteroid.setX(random.nextInt(gameData.getDisplayWidth())); asteroid.setY(gameData.getDisplayHeight()); }
-            case 2 -> { asteroid.setX(0); asteroid.setY(random.nextInt(gameData.getDisplayHeight())); }
-            default -> { asteroid.setX(gameData.getDisplayWidth()); asteroid.setY(random.nextInt(gameData.getDisplayHeight())); }
+
+        if (edge == 0) {
+            asteroid.setX(random.nextInt(gameData.getDisplayWidth()));
+            asteroid.setY(0);
+        } else if (edge == 1) {
+            asteroid.setX(random.nextInt(gameData.getDisplayWidth()));
+            asteroid.setY(gameData.getDisplayHeight());
+        } else if (edge == 2) {
+            asteroid.setX(0);
+            asteroid.setY(random.nextInt(gameData.getDisplayHeight()));
+        } else {
+            asteroid.setX(gameData.getDisplayWidth());
+            asteroid.setY(random.nextInt(gameData.getDisplayHeight()));
         }
 
         asteroid.setRadius(size);
         asteroid.setRotation(random.nextInt(360));
+
         return asteroid;
     }
 
-    public void setAsteroidSplitter(IAsteroidSplitter splitter) { this.splitter = splitter; }
-    public void removeAsteroidSplitter(IAsteroidSplitter splitter) { this.splitter = null; }
+    public void setAsteroidSplitter(IAsteroidSplitter splitter) {
+        this.splitter = splitter;
+    }
+
+    public void removeAsteroidSplitter(IAsteroidSplitter splitter) {
+        this.splitter = null;
+    }
 }

@@ -11,6 +11,8 @@
         <module name="Asteroid" />
         <module name="Collision" />
         <module name="CommonAsteroids" />
+        <module name="Enemy" />
+        <module name="Scoring" />
         <module name="CommonBullet" />
         <module name="Common" />
         <module name="Core" />
@@ -18,7 +20,6 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Asteroids" target="17" />
-      <module name="Enemy" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>

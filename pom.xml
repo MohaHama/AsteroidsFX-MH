@@ -1,16 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-
+<?xml version="1.0" encoding="UTF-8"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-
   <groupId>dk.sdu.se4</groupId>
   <artifactId>AsteroidsFX</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>AsteroidsFX</name>
-
   <modules>
     <module>Core</module>
     <module>Common</module>
@@ -20,8 +14,9 @@
     <module>CommonAsteroids</module>
     <module>Asteroids</module>
     <module>Collision</module>
+    <module>Enemy</module>
+    <module>Scoring</module>
   </modules>
-
   <properties>
     <java>java</java>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -29,9 +24,14 @@
     <maven.compiler.target>17</maven.compiler.target>
     <spring.version>6.1.3</spring.version>
   </properties>
-
   <dependencyManagement>
     <dependencies>
+      <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter</artifactId>
+        <version>5.10.1</version>
+        <scope>test</scope>
+      </dependency>
       <dependency>
         <groupId>org.openjfx</groupId>
         <artifactId>javafx-controls</artifactId>
@@ -79,7 +79,6 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
-
   <build>
     <plugins>
       <plugin>
@@ -102,14 +101,14 @@
           <workingDirectory>.</workingDirectory>
           <arguments>
             <argument>--module-path=mods-mvn</argument>
-            <argument>--add-modules=Player,Bullet,Asteroids,Collision</argument>
+            <argument>--add-modules=Player,Bullet,Asteroids,Collision,Enemy</argument>
+            <argument>--add-reads=Collision=ALL-UNNAMED</argument>
             <argument>--module=Core/dk.sdu.se4.core.App</argument>
           </arguments>
         </configuration>
       </plugin>
     </plugins>
   </build>
-
   <profiles>
     <profile>
       <id>parent-project</id>
@@ -174,5 +173,4 @@
       </build>
     </profile>
   </profiles>
-
 </project>

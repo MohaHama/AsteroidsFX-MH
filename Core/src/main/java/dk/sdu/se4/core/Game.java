@@ -11,6 +11,7 @@ import javafx.animation.AnimationTimer;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Polygon;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -30,6 +31,8 @@ class Game {
     private final List<IEntityProcessingService> processors;
     private final List<IPostEntityProcessingService> postProcessors;
 
+    private Text scoreText;
+
     Game(List<IGamePluginService> plugins,
          List<IEntityProcessingService> processors,
          List<IPostEntityProcessingService> postProcessors) {
@@ -39,9 +42,10 @@ class Game {
     }
 
     public void start(Stage window) {
-        Text text = new Text(10, 20, "Asteroids");
+        scoreText = new Text(10, 20, "Total Asteroids Destroyed: 0");
+
         gameWindow.setPrefSize(gameData.getDisplayWidth(), gameData.getDisplayHeight());
-        gameWindow.getChildren().add(text);
+        gameWindow.getChildren().add(scoreText);
 
         Scene scene = new Scene(gameWindow);
 
@@ -83,12 +87,14 @@ class Game {
         for (IEntityProcessingService processor : processors) {
             processor.process(gameData, world);
         }
+
         for (IPostEntityProcessingService post : postProcessors) {
             post.process(gameData, world);
         }
     }
 
     private void draw() {
+        scoreText.setText("Total Asteroids Destroyed: " + gameData.getScore());
 
         for (String id : polygons.keySet()) {
             if (world.getEntity(id) == null) {
@@ -98,12 +104,12 @@ class Game {
             }
         }
 
-
         for (Entity entity : world.getEntities()) {
             Polygon polygon = polygons.get(entity.getID());
 
             if (polygon == null) {
                 polygon = new Polygon(entity.getPolygonCoordinates());
+                setColor(entity, polygon);
                 polygons.put(entity.getID(), polygon);
                 gameWindow.getChildren().add(polygon);
             }
@@ -111,6 +117,18 @@ class Game {
             polygon.setTranslateX(entity.getX());
             polygon.setTranslateY(entity.getY());
             polygon.setRotate(entity.getRotation());
+        }
+    }
+
+    private void setColor(Entity entity, Polygon polygon) {
+        String name = entity.getClass().getSimpleName();
+
+        if (name.equals("Asteroid")) {
+            polygon.setFill(Color.DARKOLIVEGREEN);
+        }
+
+        if (name.equals("Enemy")) {
+            polygon.setFill(Color.RED);
         }
     }
 }

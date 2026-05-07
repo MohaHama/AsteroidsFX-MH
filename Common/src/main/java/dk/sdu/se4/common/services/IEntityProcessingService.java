@@ -4,5 +4,13 @@ import dk.sdu.se4.common.data.GameData;
 import dk.sdu.se4.common.data.World;
 
 public interface IEntityProcessingService {
+
+    /**
+     * Pre-condition: gameData and world are not null.
+     * Post-condition: the component has updated its own entities in the world.
+     *
+     * @param gameData the game data used by the component
+     * @param world the world where entities are stored
+     */
     void process(GameData gameData, World world);
 }

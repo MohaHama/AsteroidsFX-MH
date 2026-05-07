@@ -22,6 +22,7 @@
       <artifactId>Common</artifactId>
       <version>${project.version}</version>
     </dependency>
+
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>CommonBullet</artifactId>
@@ -33,11 +34,13 @@
       <artifactId>javafx-controls</artifactId>
       <version>21.0.2</version>
     </dependency>
+
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-graphics</artifactId>
       <version>21.0.2</version>
     </dependency>
+
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-base</artifactId>
@@ -48,15 +51,24 @@
       <groupId>org.springframework</groupId>
       <artifactId>spring-context</artifactId>
     </dependency>
+
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-core</artifactId>
     </dependency>
+
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-beans</artifactId>
     </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-web</artifactId>
+      <version>6.1.3</version>
+    </dependency>
   </dependencies>
+
   <build>
     <plugins>
       <plugin>
@@ -70,11 +82,7 @@
               <goal>copy-dependencies</goal>
             </goals>
             <configuration>
-              <includeArtifactIds>
-                javafx-controls,javafx-graphics,javafx-base,
-                spring-context,spring-core,spring-beans,
-                spring-aop,spring-expression,spring-jcl
-              </includeArtifactIds>
+              <includeArtifactIds>javafx-controls,javafx-graphics,javafx-base,spring-context,spring-core,spring-beans,spring-aop,spring-expression,spring-jcl,spring-web,micrometer-observation,micrometer-commons</includeArtifactIds>
               <outputDirectory>../mods-mvn</outputDirectory>
             </configuration>
           </execution>
