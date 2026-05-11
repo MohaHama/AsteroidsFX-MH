@@ -25,10 +25,10 @@ public class BulletControlSystem implements IEntityProcessingService, BulletSPI 
         Bullet bulletEntity = new Bullet();
 
         bulletEntity.setPolygonCoordinates(
-                1, -1,
-                1, 1,
-                -1, 1,
-                -1, -1
+                2, -2,
+                2, 2,
+                -2, 2,
+                -2, -2
         );
 
         double movementX = Math.cos(Math.toRadians(shooter.getRotation()));
@@ -37,7 +37,7 @@ public class BulletControlSystem implements IEntityProcessingService, BulletSPI 
         bulletEntity.setX(shooter.getX() + movementX * 10);
         bulletEntity.setY(shooter.getY() + movementY * 10);
         bulletEntity.setRotation(shooter.getRotation());
-        bulletEntity.setRadius(1);
+        bulletEntity.setRadius(2);
         bulletEntity.setOwnerID(shooter.getID());
 
         return bulletEntity;

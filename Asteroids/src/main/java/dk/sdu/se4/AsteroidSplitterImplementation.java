@@ -1,5 +1,6 @@
 package dk.sdu.se4.asteroids;
 
+import dk.sdu.se4.common.asteroids.Asteroid;
 import dk.sdu.se4.common.asteroids.IAsteroidSplitter;
 import dk.sdu.se4.common.data.Entity;
 import dk.sdu.se4.common.data.World;
@@ -8,33 +9,41 @@ import java.util.Random;
 
 public class AsteroidSplitterImplementation implements IAsteroidSplitter {
 
-    Random random = new Random();
+    private final Random random = new Random();
 
     @Override
-    public void createSplitAsteroid(Entity asteroidEntity, World world) {
-        float oldRadius = asteroidEntity.getRadius();
+    public void createSplitAsteroid(Entity oldAsteroid, World world) {
 
-        if (oldRadius < 5) {
+        if (oldAsteroid.getRadius() <= 7) {
             return;
         }
 
-        float newSize = oldRadius / 2;
+        float newSize = oldAsteroid.getRadius() / 2;
 
-        Entity split1 = new dk.sdu.se4.common.asteroids.Asteroid();
-        split1.setPolygonCoordinates(newSize, -newSize, -newSize, -newSize, -newSize, newSize, newSize, newSize);
-        split1.setX(asteroidEntity.getX() + 10);
-        split1.setY(asteroidEntity.getY() + 10);
-        split1.setRadius(newSize);
-        split1.setRotation(random.nextInt(360));
+        Entity first = makeAsteroid(oldAsteroid, newSize, 15);
+        Entity second = makeAsteroid(oldAsteroid, newSize, -15);
 
-        Entity split2 = new dk.sdu.se4.common.asteroids.Asteroid();
-        split2.setPolygonCoordinates(newSize, -newSize, -newSize, -newSize, -newSize, newSize, newSize, newSize);
-        split2.setX(asteroidEntity.getX() - 10);
-        split2.setY(asteroidEntity.getY() - 10);
-        split2.setRadius(newSize);
-        split2.setRotation(random.nextInt(360));
+        world.addEntity(first);
+        world.addEntity(second);
+    }
 
-        world.addEntity(split1);
-        world.addEntity(split2);
+    private Entity makeAsteroid(Entity oldAsteroid, float size, int move) {
+
+        Entity asteroid = new Asteroid();
+
+        asteroid.setHealth(1);
+        asteroid.setRadius(size);
+        asteroid.setX(oldAsteroid.getX() + move);
+        asteroid.setY(oldAsteroid.getY() + move);
+        asteroid.setRotation(random.nextInt(360));
+
+        asteroid.setPolygonCoordinates(
+                size, -size,
+                -size, -size,
+                -size, size,
+                size, size
+        );
+
+        return asteroid;
     }
 }

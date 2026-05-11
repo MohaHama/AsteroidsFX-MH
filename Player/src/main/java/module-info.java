@@ -1,12 +1,12 @@
-import dk.sdu.se4.common.services.IEntityProcessingService;
-import dk.sdu.se4.common.services.IGamePluginService;
-
 module Player {
     requires Common;
     requires CommonBullet;
 
     uses dk.sdu.se4.common.bullet.BulletSPI;
 
-    provides IGamePluginService with dk.sdu.se4.player.PlayerPlugin;
-    provides IEntityProcessingService with dk.sdu.se4.player.PlayerControlSystem;
+    provides dk.sdu.se4.common.services.IGamePluginService
+            with dk.sdu.se4.player.PlayerPlugin;
+
+    provides dk.sdu.se4.common.services.IEntityProcessingService
+            with dk.sdu.se4.player.PlayerControlSystem;
 }

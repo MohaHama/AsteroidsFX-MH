@@ -7,15 +7,12 @@ import dk.sdu.se4.common.data.Entity;
 import dk.sdu.se4.common.data.GameData;
 import dk.sdu.se4.common.data.World;
 import dk.sdu.se4.common.services.IPostEntityProcessingService;
-import org.springframework.web.client.RestTemplate;
+import dk.sdu.se4.common.util.ServiceLocator;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.ServiceLoader;
 
 public class CollisionDetector implements IPostEntityProcessingService {
-
-    private final RestTemplate restTemplate = new RestTemplate();
 
     @Override
     public void process(GameData gameData, World world) {
@@ -38,111 +35,86 @@ public class CollisionDetector implements IPostEntityProcessingService {
     }
 
     private void handleCollision(Entity first, Entity second, World world, GameData gameData) {
-        if (isShip(first) && second instanceof Asteroid) {
-            hitShip(first, world);
-            destroy(second, world);
-            return;
-        }
-
-        if (isShip(second) && first instanceof Asteroid) {
-            hitShip(second, world);
-            destroy(first, world);
-            return;
-        }
-
         if (first instanceof Bullet && second instanceof Asteroid) {
-            destroy(first, world);
-            hitAsteroid(second, world, gameData);
+            splitAsteroid(second, world);
+            world.removeEntity(first);
+            world.removeEntity(second);
+            gameData.setScore(gameData.getScore() + 1);
             return;
         }
 
         if (second instanceof Bullet && first instanceof Asteroid) {
-            destroy(second, world);
-            hitAsteroid(first, world, gameData);
+            splitAsteroid(first, world);
+            world.removeEntity(second);
+            world.removeEntity(first);
+            gameData.setScore(gameData.getScore() + 1);
             return;
         }
 
         if (first instanceof Bullet && isShip(second)) {
-            hitShipWithBullet((Bullet) first, second, world);
+            if (!sameOwner((Bullet) first, second)) {
+                world.removeEntity(first);
+                damage(second, world);
+            }
             return;
         }
 
         if (second instanceof Bullet && isShip(first)) {
-            hitShipWithBullet((Bullet) second, first, world);
-        }
-    }
-
-    private void hitShipWithBullet(Bullet bullet, Entity ship, World world) {
-        if (ship.getID().equals(bullet.getOwnerID())) {
+            if (!sameOwner((Bullet) second, first)) {
+                world.removeEntity(second);
+                damage(first, world);
+            }
             return;
         }
 
-        destroy(bullet, world);
-        hitShip(ship, world);
-    }
+        if (first instanceof Asteroid && isShip(second)) {
+            damage(second, world);
+            return;
+        }
 
-    private void hitAsteroid(Entity asteroid, World world, GameData gameData) {
-        asteroid.setHealth(asteroid.getHealth() - 1);
-
-        if (asteroid.getHealth() <= 0) {
-            splitAsteroid(asteroid, world);
-            destroy(asteroid, world);
-            addScore(gameData, 1);
+        if (second instanceof Asteroid && isShip(first)) {
+            damage(first, world);
         }
     }
 
-    private void hitShip(Entity ship, World world) {
-        ship.setHealth(ship.getHealth() - 1);
-
-        if (ship.getHealth() <= 0) {
-            destroy(ship, world);
-        }
+    private boolean sameOwner(Bullet bullet, Entity entity) {
+        return bullet.getOwnerID() != null && bullet.getOwnerID().equals(entity.getID());
     }
 
-    private void destroy(Entity entity, World world) {
-        world.removeEntity(entity);
+    private void damage(Entity entity, World world) {
+        long now = System.currentTimeMillis();
+
+        if (entity.getImmuneUntil() > now) {
+            return;
+        }
+
+        entity.setHealth(entity.getHealth() - 1);
+        entity.setImmuneUntil(now + 1200);
+        entity.setFlashUntil(now + 1200);
+
+        if (entity.getHealth() <= 0) {
+            world.removeEntity(entity);
+        }
     }
 
     private boolean isShip(Entity entity) {
-        return isPlayer(entity) || isEnemy(entity);
-    }
+        String name = entity.getClass().getSimpleName();
 
-    private boolean isPlayer(Entity entity) {
-        return entity.getClass().getSimpleName().equals("Player");
-    }
-
-    private boolean isEnemy(Entity entity) {
-        return entity.getClass().getSimpleName().equals("Enemy");
-    }
-
-    private void addScore(GameData gameData, int points) {
-        try {
-            Integer score = restTemplate.postForObject(
-                    "http://localhost:8080/score/add/" + points,
-                    null,
-                    Integer.class
-            );
-
-            if (score != null) {
-                gameData.setScore(score);
-            }
-        } catch (Exception e) {
-            gameData.setScore(gameData.getScore() + points);
-        }
+        return name.equals("Player") || name.equals("Enemy");
     }
 
     private void splitAsteroid(Entity asteroid, World world) {
-        ServiceLoader<IAsteroidSplitter> loader = ServiceLoader.load(IAsteroidSplitter.class);
+        List<IAsteroidSplitter> splitters = ServiceLocator.INSTANCE.locateAll(IAsteroidSplitter.class);
 
-        for (IAsteroidSplitter splitter : loader) {
-            splitter.createSplitAsteroid(asteroid, world);
-            return;
+        if (!splitters.isEmpty()) {
+            splitters.get(0).createSplitAsteroid(asteroid, world);
         }
     }
 
     public boolean collides(Entity first, Entity second) {
         float dx = (float) first.getX() - (float) second.getX();
         float dy = (float) first.getY() - (float) second.getY();
+
         float distance = (float) Math.sqrt(dx * dx + dy * dy);
 
         return distance < first.getRadius() + second.getRadius();
