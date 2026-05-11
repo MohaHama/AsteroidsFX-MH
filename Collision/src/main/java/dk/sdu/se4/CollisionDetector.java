@@ -65,12 +65,12 @@ public class CollisionDetector implements IPostEntityProcessingService {
         }
 
         if (first instanceof Asteroid && isShip(second)) {
-            damage(second, world);
+            world.removeEntity(second);
             return;
         }
 
         if (second instanceof Asteroid && isShip(first)) {
-            damage(first, world);
+            world.removeEntity(first);
         }
     }
 
