@@ -1,18 +1,19 @@
 package dk.sdu.se4.collisionsystem;
 
 import dk.sdu.se4.common.asteroids.Asteroid;
-import dk.sdu.se4.common.asteroids.IAsteroidSplitter;
 import dk.sdu.se4.common.bullet.Bullet;
 import dk.sdu.se4.common.data.Entity;
 import dk.sdu.se4.common.data.GameData;
 import dk.sdu.se4.common.data.World;
 import dk.sdu.se4.common.services.IPostEntityProcessingService;
-import dk.sdu.se4.common.util.ServiceLocator;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class CollisionDetector implements IPostEntityProcessingService {
+
+    private final Random random = new Random();
 
     @Override
     public void process(GameData gameData, World world) {
@@ -36,18 +37,14 @@ public class CollisionDetector implements IPostEntityProcessingService {
 
     private void handleCollision(Entity first, Entity second, World world, GameData gameData) {
         if (first instanceof Bullet && second instanceof Asteroid) {
-            splitAsteroid(second, world);
+            hitAsteroid(second, world, gameData);
             world.removeEntity(first);
-            world.removeEntity(second);
-            gameData.setScore(gameData.getScore() + 1);
             return;
         }
 
         if (second instanceof Bullet && first instanceof Asteroid) {
-            splitAsteroid(first, world);
+            hitAsteroid(first, world, gameData);
             world.removeEntity(second);
-            world.removeEntity(first);
-            gameData.setScore(gameData.getScore() + 1);
             return;
         }
 
@@ -77,6 +74,42 @@ public class CollisionDetector implements IPostEntityProcessingService {
         }
     }
 
+    private void hitAsteroid(Entity asteroid, World world, GameData gameData) {
+        splitAsteroid(asteroid, world);
+        world.removeEntity(asteroid);
+        gameData.setScore(gameData.getScore() + 1);
+    }
+
+    private void splitAsteroid(Entity asteroid, World world) {
+        if (asteroid.getRadius() <= 8) {
+            return;
+        }
+
+        float size = asteroid.getRadius() / 2;
+
+        world.addEntity(createAsteroid(asteroid, size, -15));
+        world.addEntity(createAsteroid(asteroid, size, 15));
+    }
+
+    private Entity createAsteroid(Entity oldAsteroid, float size, int move) {
+        Entity asteroid = new Asteroid();
+
+        asteroid.setHealth(1);
+        asteroid.setRadius(size);
+        asteroid.setX(oldAsteroid.getX() + move);
+        asteroid.setY(oldAsteroid.getY() - move);
+        asteroid.setRotation(random.nextInt(360));
+
+        asteroid.setPolygonCoordinates(
+                size, -size,
+                -size, -size,
+                -size, size,
+                size, size
+        );
+
+        return asteroid;
+    }
+
     private boolean sameOwner(Bullet bullet, Entity entity) {
         return bullet.getOwnerID() != null && bullet.getOwnerID().equals(entity.getID());
     }
@@ -99,16 +132,7 @@ public class CollisionDetector implements IPostEntityProcessingService {
 
     private boolean isShip(Entity entity) {
         String name = entity.getClass().getSimpleName();
-
         return name.equals("Player") || name.equals("Enemy");
-    }
-
-    private void splitAsteroid(Entity asteroid, World world) {
-        List<IAsteroidSplitter> splitters = ServiceLocator.INSTANCE.locateAll(IAsteroidSplitter.class);
-
-        if (!splitters.isEmpty()) {
-            splitters.get(0).createSplitAsteroid(asteroid, world);
-        }
     }
 
     public boolean collides(Entity first, Entity second) {

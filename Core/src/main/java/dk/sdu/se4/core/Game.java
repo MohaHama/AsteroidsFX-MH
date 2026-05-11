@@ -138,13 +138,13 @@ class Game {
                     polygon.setFill(Color.BLACK);
                 }
                 else if (entity.getClass().getSimpleName().equals("Enemy")) {
-                    polygon.setFill(Color.RED);
+                    polygon.setFill(Color.BLUE);
                 }
                 else if (entity.getClass().getSimpleName().equals("Asteroid")) {
                     polygon.setFill(Color.GRAY);
                 }
                 else {
-                    polygon.setFill(Color.YELLOW);
+                    polygon.setFill(Color.RED);
                 }
 
                 polygons.put(entity.getID(), polygon);

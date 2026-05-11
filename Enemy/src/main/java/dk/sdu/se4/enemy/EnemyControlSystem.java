@@ -1,11 +1,10 @@
 package dk.sdu.se4.enemy;
 
-import dk.sdu.se4.common.bullet.BulletSPI;
+import dk.sdu.se4.common.bullet.Bullet;
 import dk.sdu.se4.common.data.Entity;
 import dk.sdu.se4.common.data.GameData;
 import dk.sdu.se4.common.data.World;
 import dk.sdu.se4.common.services.IEntityProcessingService;
-import dk.sdu.se4.common.util.ServiceLocator;
 
 import java.util.List;
 import java.util.Random;
@@ -25,11 +24,6 @@ public class EnemyControlSystem implements IEntityProcessingService {
             return;
         }
 
-        while (enemies.size() > 1) {
-            world.removeEntity(enemies.get(enemies.size() - 1));
-            enemies = world.getEntities(Enemy.class);
-        }
-
         Entity enemy = enemies.get(0);
         Entity player = getPlayer(world);
 
@@ -47,11 +41,11 @@ public class EnemyControlSystem implements IEntityProcessingService {
         double x = Math.cos(Math.toRadians(enemy.getRotation()));
         double y = Math.sin(Math.toRadians(enemy.getRotation()));
 
-        enemy.setX(enemy.getX() + x * 0.45);
-        enemy.setY(enemy.getY() + y * 0.45);
+        enemy.setX(enemy.getX() + x * 0.35);
+        enemy.setY(enemy.getY() + y * 0.35);
 
-        if (now - lastShot > 1000) {
-            shoot(enemy, gameData, world);
+        if (now - lastShot > 4000) {
+            world.addEntity(createBullet(enemy));
             lastShot = now;
         }
 
@@ -82,18 +76,25 @@ public class EnemyControlSystem implements IEntityProcessingService {
         return null;
     }
 
-    private void shoot(Entity enemy, GameData gameData, World world) {
-        List<BulletSPI> bulletServices = ServiceLocator.INSTANCE.locateAll(BulletSPI.class);
+    private Entity createBullet(Entity enemy) {
+        Bullet bullet = new Bullet();
 
-        if (bulletServices.isEmpty()) {
-            return;
-        }
+        bullet.setPolygonCoordinates(
+                2, -2,
+                2, 2,
+                -2, 2,
+                -2, -2
+        );
 
-        Entity bullet = bulletServices.get(0).createBullet(enemy, gameData);
+        double x = Math.cos(Math.toRadians(enemy.getRotation()));
+        double y = Math.sin(Math.toRadians(enemy.getRotation()));
 
-        if (bullet != null) {
-            bullet.setRotation(enemy.getRotation());
-            world.addEntity(bullet);
-        }
+        bullet.setX(enemy.getX() + x * 18);
+        bullet.setY(enemy.getY() + y * 18);
+        bullet.setRotation(enemy.getRotation());
+        bullet.setRadius(2);
+        bullet.setOwnerID(enemy.getID());
+
+        return bullet;
     }
 }

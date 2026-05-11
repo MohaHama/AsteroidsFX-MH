@@ -5,55 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32028c03-dfb2-44b7-8874-bd655354ef6b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Asteroids/src/main/java/dk/sdu/se4/AsteroidProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Asteroids/src/main/java/dk/sdu/se4/AsteroidProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Asteroids/src/main/java/dk/sdu/se4/AsteroidSplitterImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/Asteroids/src/main/java/dk/sdu/se4/AsteroidSplitterImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Asteroids/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/Asteroids/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Asteroids/target/Asteroid-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Asteroids/target/Asteroid-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Asteroids/target/classes/dk/sdu/se4/asteroids/AsteroidProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/Asteroids/target/classes/dk/sdu/se4/asteroids/AsteroidProcessor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Asteroids/target/classes/dk/sdu/se4/asteroids/AsteroidSplitterImplementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/Asteroids/target/classes/dk/sdu/se4/asteroids/AsteroidSplitterImplementation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bullet/src/main/java/dk/sdu/se4/bullet/BulletControlSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bullet/src/main/java/dk/sdu/se4/bullet/BulletControlSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bullet/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bullet/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bullet/target/Bullet-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Bullet/target/Bullet-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bullet/target/classes/dk/sdu/se4/bullet/BulletControlSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bullet/target/classes/dk/sdu/se4/bullet/BulletControlSystem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bullet/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bullet/target/classes/module-info.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Collision/src/main/java/dk/sdu/se4/CollisionDetector.java" beforeDir="false" afterPath="$PROJECT_DIR$/Collision/src/main/java/dk/sdu/se4/CollisionDetector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collision/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/Collision/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Collision/target/Collision-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Collision/target/Collision-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collision/target/classes/dk/sdu/se4/collisionsystem/CollisionDetector.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collision/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/Collision/target/classes/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Collision/target/classes/dk/sdu/se4/collisionsystem/CollisionDetector.class" beforeDir="false" afterPath="$PROJECT_DIR$/Collision/target/classes/dk/sdu/se4/collisionsystem/CollisionDetector.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Collision/target/surefire-reports/TEST-dk.sdu.se4.collisionsystem.CollisionDetectorTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Collision/target/surefire-reports/TEST-dk.sdu.se4.collisionsystem.CollisionDetectorTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Collision/target/surefire-reports/dk.sdu.se4.collisionsystem.CollisionDetectorTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Collision/target/surefire-reports/dk.sdu.se4.collisionsystem.CollisionDetectorTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/dk/sdu/se4/common/data/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/dk/sdu/se4/common/data/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/dk/sdu/se4/common/util/ServiceLocator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/dk/sdu/se4/common/util/ServiceLocator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/target/Common-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Common/target/Common-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/target/classes/dk/sdu/se4/common/data/Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/Common/target/classes/dk/sdu/se4/common/data/Entity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/target/classes/dk/sdu/se4/common/util/ServiceLocator.class" beforeDir="false" afterPath="$PROJECT_DIR$/Common/target/classes/dk/sdu/se4/common/util/ServiceLocator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CommonAsteroids/target/CommonAsteroids-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/CommonAsteroids/target/CommonAsteroids-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CommonBullet/target/CommonBullet-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/CommonBullet/target/CommonBullet-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/src/main/java/dk/sdu/se4/core/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/dk/sdu/se4/core/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/target/Core-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Core/target/Core-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/Core/target/classes/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/target/classes/dk/sdu/se4/core/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/Core/target/classes/dk/sdu/se4/core/Game.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Enemy/src/main/java/dk/sdu/se4/enemy/EnemyControlSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/Enemy/src/main/java/dk/sdu/se4/enemy/EnemyControlSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Enemy/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/Enemy/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Enemy/target/Enemy-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Enemy/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Enemy/target/Enemy-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Enemy/target/Enemy-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Enemy/target/classes/dk/sdu/se4/enemy/EnemyControlSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/Enemy/target/classes/dk/sdu/se4/enemy/EnemyControlSystem.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Player/src/main/java/dk/sdu/se4/player/PlayerControlSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/Player/src/main/java/dk/sdu/se4/player/PlayerControlSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Player/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/Player/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Player/target/Player-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Player/target/Player-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Player/target/classes/dk/sdu/se4/player/PlayerControlSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/Player/target/classes/dk/sdu/se4/player/PlayerControlSystem.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Player/target/surefire-reports/TEST-dk.sdu.se4.player.PlayerMovementTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Player/target/surefire-reports/TEST-dk.sdu.se4.player.PlayerMovementTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Player/target/surefire-reports/dk.sdu.se4.player.PlayerMovementTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Player/target/surefire-reports/dk.sdu.se4.player.PlayerMovementTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scoring/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Scoring/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scoring/src/main/java/dk/sdu/se4/scoring/ScoreController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scoring/src/main/java/dk/sdu/se4/scoring/ScoringApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Scoring/src/main/java/dk/sdu/se4/scoring/ScoringApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scoring/target/Scoring-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Scoring/target/Scoring-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scoring/target/classes/dk/sdu/se4/scoring/ScoreController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scoring/target/classes/dk/sdu/se4/scoring/ScoringApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/Scoring/target/classes/dk/sdu/se4/scoring/ScoringApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scoring/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Scoring/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scoring/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Scoring/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scoring/target/Scoring-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/Scoring/target/Scoring-1.0-SNAPSHOT.jar.original" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mods-mvn/Asteroid-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/mods-mvn/Asteroid-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mods-mvn/Bullet-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/mods-mvn/Bullet-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mods-mvn/Collision-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/mods-mvn/Collision-1.0-SNAPSHOT.jar" afterDir="false" />
@@ -61,10 +38,17 @@
       <change beforePath="$PROJECT_DIR$/mods-mvn/CommonAsteroids-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/mods-mvn/CommonAsteroids-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mods-mvn/CommonBullet-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/mods-mvn/CommonBullet-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mods-mvn/Core-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/mods-mvn/Core-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods-mvn/Enemy-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mods-mvn/Enemy-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/mods-mvn/Enemy-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mods-mvn/Player-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/mods-mvn/Player-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mods-mvn/Scoring-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/Asteroid-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/Asteroid-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/Bullet-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/Bullet-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/Collision-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/Collision-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/Common-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/Common-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/CommonAsteroids-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/CommonAsteroids-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/CommonBullet-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/CommonBullet-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/Core-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/Core-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/Enemy-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/Enemy-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/Player-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/Player-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

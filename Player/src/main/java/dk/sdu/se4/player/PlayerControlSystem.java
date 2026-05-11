@@ -18,19 +18,19 @@ public class PlayerControlSystem implements IEntityProcessingService {
     public void process(GameData gameData, World world) {
         for (Entity playerEntity : world.getEntities(Player.class)) {
             if (gameData.getKeys().isDown(GameKeys.LEFT)) {
-                playerEntity.setRotation(playerEntity.getRotation() - 5);
+                playerEntity.setRotation(playerEntity.getRotation() - 6);
             }
 
             if (gameData.getKeys().isDown(GameKeys.RIGHT)) {
-                playerEntity.setRotation(playerEntity.getRotation() + 5);
+                playerEntity.setRotation(playerEntity.getRotation() + 6);
             }
 
             if (gameData.getKeys().isDown(GameKeys.UP)) {
                 double movementX = Math.cos(Math.toRadians(playerEntity.getRotation()));
                 double movementY = Math.sin(Math.toRadians(playerEntity.getRotation()));
 
-                playerEntity.setX(playerEntity.getX() + movementX);
-                playerEntity.setY(playerEntity.getY() + movementY);
+                playerEntity.setX(playerEntity.getX() + movementX * 2);
+                playerEntity.setY(playerEntity.getY() + movementY * 2);
             }
 
             if (gameData.getKeys().isPressed(GameKeys.SPACE)) {

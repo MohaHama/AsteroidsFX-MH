@@ -13,22 +13,20 @@ public class AsteroidSplitterImplementation implements IAsteroidSplitter {
 
     @Override
     public void createSplitAsteroid(Entity oldAsteroid, World world) {
-
-        if (oldAsteroid.getRadius() <= 7) {
+        if (oldAsteroid.getRadius() <= 8) {
             return;
         }
 
-        float newSize = oldAsteroid.getRadius() / 2;
+        float size = oldAsteroid.getRadius() / 2;
 
-        Entity first = makeAsteroid(oldAsteroid, newSize, 15);
-        Entity second = makeAsteroid(oldAsteroid, newSize, -15);
+        Entity first = makeAsteroid(oldAsteroid, size, 12);
+        Entity second = makeAsteroid(oldAsteroid, size, -12);
 
         world.addEntity(first);
         world.addEntity(second);
     }
 
     private Entity makeAsteroid(Entity oldAsteroid, float size, int move) {
-
         Entity asteroid = new Asteroid();
 
         asteroid.setHealth(1);
