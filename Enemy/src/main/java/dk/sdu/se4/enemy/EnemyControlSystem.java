@@ -1,13 +1,17 @@
 package dk.sdu.se4.enemy;
 
-import dk.sdu.se4.common.bullet.Bullet;
+import dk.sdu.se4.common.bullet.BulletSPI;
 import dk.sdu.se4.common.data.Entity;
 import dk.sdu.se4.common.data.GameData;
 import dk.sdu.se4.common.data.World;
 import dk.sdu.se4.common.services.IEntityProcessingService;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Random;
+import java.util.ServiceLoader;
+
+import static java.util.stream.Collectors.toList;
 
 public class EnemyControlSystem implements IEntityProcessingService {
 
@@ -45,7 +49,9 @@ public class EnemyControlSystem implements IEntityProcessingService {
         enemy.setY(enemy.getY() + y * 0.35);
 
         if (now - lastShot > 4000) {
-            world.addEntity(createBullet(enemy));
+            getBulletSPIs().stream().findFirst().ifPresent(
+                    bulletSPI -> world.addEntity(bulletSPI.createBullet(enemy, gameData))
+            );
             lastShot = now;
         }
 
@@ -76,25 +82,10 @@ public class EnemyControlSystem implements IEntityProcessingService {
         return null;
     }
 
-    private Entity createBullet(Entity enemy) {
-        Bullet bullet = new Bullet();
-
-        bullet.setPolygonCoordinates(
-                2, -2,
-                2, 2,
-                -2, 2,
-                -2, -2
-        );
-
-        double x = Math.cos(Math.toRadians(enemy.getRotation()));
-        double y = Math.sin(Math.toRadians(enemy.getRotation()));
-
-        bullet.setX(enemy.getX() + x * 18);
-        bullet.setY(enemy.getY() + y * 18);
-        bullet.setRotation(enemy.getRotation());
-        bullet.setRadius(2);
-        bullet.setOwnerID(enemy.getID());
-
-        return bullet;
+    private Collection<? extends BulletSPI> getBulletSPIs() {
+        return ServiceLoader.load(BulletSPI.class)
+                .stream()
+                .map(ServiceLoader.Provider::get)
+                .collect(toList());
     }
 }
