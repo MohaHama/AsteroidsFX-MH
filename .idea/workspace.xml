@@ -8,25 +8,17 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Asteroids/target/Asteroid-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Asteroids/target/Asteroid-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bullet/target/Bullet-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Bullet/target/Bullet-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collision/src/test/java/dk/sdu/se4/collisionsystem/CollisionDetectorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Collision/src/test/java/dk/sdu/se4/collisionsystem/CollisionDetectorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Collision/target/Collision-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Collision/target/Collision-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Collision/target/surefire-reports/TEST-dk.sdu.se4.collisionsystem.CollisionDetectorTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Collision/target/surefire-reports/TEST-dk.sdu.se4.collisionsystem.CollisionDetectorTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Collision/target/surefire-reports/dk.sdu.se4.collisionsystem.CollisionDetectorTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Collision/target/surefire-reports/dk.sdu.se4.collisionsystem.CollisionDetectorTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Collision/target/test-classes/dk/sdu/se4/collisionsystem/CollisionDetectorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Collision/target/test-classes/dk/sdu/se4/collisionsystem/CollisionDetectorTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/target/Common-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Common/target/Common-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CommonAsteroids/target/CommonAsteroids-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/CommonAsteroids/target/CommonAsteroids-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CommonBullet/target/CommonBullet-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/CommonBullet/target/CommonBullet-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/target/Core-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Core/target/Core-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Enemy/src/main/java/dk/sdu/se4/enemy/EnemyControlSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/Enemy/src/main/java/dk/sdu/se4/enemy/EnemyControlSystem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Enemy/target/Enemy-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Enemy/target/Enemy-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Enemy/target/classes/dk/sdu/se4/enemy/EnemyControlSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/Enemy/target/classes/dk/sdu/se4/enemy/EnemyControlSystem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Player/src/main/java/dk/sdu/se4/player/PlayerControlSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/Player/src/main/java/dk/sdu/se4/player/PlayerControlSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Player/src/test/java/dk/sdu/se4/player/PlayerMovementTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Player/src/test/java/dk/sdu/se4/player/PlayerMovementTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Player/target/Player-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Player/target/Player-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Player/target/classes/dk/sdu/se4/player/PlayerControlSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/Player/target/classes/dk/sdu/se4/player/PlayerControlSystem.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Player/target/surefire-reports/TEST-dk.sdu.se4.player.PlayerMovementTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Player/target/surefire-reports/TEST-dk.sdu.se4.player.PlayerMovementTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Player/target/surefire-reports/dk.sdu.se4.player.PlayerMovementTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Player/target/surefire-reports/dk.sdu.se4.player.PlayerMovementTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Player/target/test-classes/dk/sdu/se4/player/PlayerMovementTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Player/target/test-classes/dk/sdu/se4/player/PlayerMovementTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scoring/target/Scoring-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Scoring/target/Scoring-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scoring/target/Scoring-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/Scoring/target/Scoring-1.0-SNAPSHOT.jar.original" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mods-mvn/Asteroid-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/mods-mvn/Asteroid-1.0-SNAPSHOT.jar" afterDir="false" />
@@ -47,7 +39,6 @@
       <change beforePath="$PROJECT_DIR$/plugins/Core-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/Core-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/Enemy-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/Enemy-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/Player-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/Player-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

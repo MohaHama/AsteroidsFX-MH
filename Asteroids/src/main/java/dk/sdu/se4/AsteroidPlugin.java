@@ -37,7 +37,7 @@ public class AsteroidPlugin implements IGamePluginService {
                 asteroidSize, asteroidSize
         );
 
-        // Spawn in top-left corner, far from player at center
+        //spawn in topleft corner, far from player at center so player gets a second to start
         asteroidEntity.setX(50);
         asteroidEntity.setY(50);
         asteroidEntity.setRadius(asteroidSize);

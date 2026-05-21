@@ -47,7 +47,7 @@ public class PlayerMovementTest {
         player.setPolygonCoordinates(-5, -5, 10, 0, -5, 5);
         world.addEntity(player);
 
-        // press left and process rotation
+        //press left and process rotation
         gameData.getKeys().setKey(GameKeys.LEFT, true);
         controlSystem.process(gameData, world);
 
@@ -60,7 +60,7 @@ public class PlayerMovementTest {
         World world = new World();
         PlayerControlSystem controlSystem = new PlayerControlSystem();
 
-        // create player
+        //create player
         Entity player = new Player();
         player.setX(400);
         player.setY(400);
@@ -69,7 +69,7 @@ public class PlayerMovementTest {
         player.setPolygonCoordinates(-5, -5, 10, 0, -5, 5);
         world.addEntity(player);
 
-        // press right and process rotation
+        //press right and process rotation
         gameData.getKeys().setKey(GameKeys.RIGHT, true);
         controlSystem.process(gameData, world);
 
